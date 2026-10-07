@@ -1,0 +1,82 @@
+---
+interface Props {
+  name: string
+  title: string
+  location: string
+  email: string
+  summary: string
+  philosophy: string[]
+  inspirations: { name: string; role: string; impact: string }[]
+  body: string
+}
+const { name, title, location, email, summary, philosophy, inspirations, body } = Astro.props
+---
+
+<section id="about" class="py-20 lg:py-32 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900 dark:text-white mb-4">
+        About Me
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        {summary || "Teaching telecom technology, passionate about cyber security, and sharing knowledge."}
+      </p>
+    </header>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <!-- Bio Content -->
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        {body && <div class="prose-content" set:html={body} />}
+      </div>
+
+      <!-- Philosophy & Inspirations -->
+      <div class="space-y-8">
+        <!-- Philosophy -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 sm:p-8 border border-gray-200 dark:border-gray-700">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+            <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0114 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            Philosophy
+          </h3>
+          <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+            {philosophy?.map((item: string) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Inspirations -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 sm:p-8 border border-gray-200 dark:border-gray-700">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+            <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0114 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            Key Inspirations
+          </h3>
+          <div class="space-y-4">
+            {inspirations?.map((inspiration: any) => (
+              <div class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center flex-shrink-0">
+                  <span class="text-xl font-bold text-purple-700 dark:text-purple-300">
+                    {inspiration.name.charAt(0)}
+                  </span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 dark:text-white">{inspiration.name}</h4>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">{inspiration.role}</p>
+                  <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">{inspiration.impact}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

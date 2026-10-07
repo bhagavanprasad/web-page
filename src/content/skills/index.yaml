@@ -1,0 +1,54 @@
+categories:
+  - name: "Telecom & Communication"
+    icon: "📡"
+    skills:
+      - "Telecom Technology Training"
+      - "Employability Enhancement Training (EETP)"
+      - "Networking (CCNA)"
+      - "Network Protocols"
+      - "Signal Processing"
+  
+  - name: "Cyber Security"
+    icon: "🔐"
+    skills:
+      - "Ethical Hacking (AFCEH Certified)"
+      - "Vulnerability Assessment"
+      - "Penetration Testing Basics"
+      - "Security Awareness Training"
+      - "Digital Forensics Fundamentals"
+
+  - name: "Electrical Engineering"
+    icon: "⚡"
+    skills:
+      - "Power System Analysis"
+      - "Computer Methods in Power Systems"
+      - "Circuit Design & Analysis"
+      - "MATLAB/Simulink"
+      - "Electrical Machines"
+
+  - name: "Computer Science"
+    icon: "💻"
+    skills:
+      - "Programming (C, Python, JavaScript)"
+      - "Algorithms & Data Structures"
+      - "Software Engineering Principles"
+      - "Web Technologies"
+      - "Database Systems"
+
+  - name: "Teaching & Pedagogy"
+    icon: "🎓"
+    skills:
+      - "Curriculum Development"
+      - "Technical Training Delivery"
+      - "Student Mentoring"
+      - "Industry-Academia Bridge Programs"
+      - "Workshop & Seminar Facilitation"
+
+  - name: "Tools & Platforms"
+    icon: "🛠️"
+    skills:
+      - "Linux/Unix Systems"
+      - "Version Control (Git)"
+      - "Documentation (Markdown, LaTeX)"
+      - "Presentation Tools"
+      - "Learning Management Systems"

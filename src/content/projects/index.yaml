@@ -1,0 +1,92 @@
+projects:
+  - id: "bsnl-eetp-program"
+    title: "BSNL EETP Training Program"
+    shortDescription: "Employability Enhancement Training Program for engineering students"
+    longDescription: |
+      Developed and deliver comprehensive telecom technology training for engineering students
+      and professionals. Covers summer/winter internships, inplant trainings, and one-day exchange visits.
+    thumbnail: "/images/projects/bsnl-eetp.jpg"
+    techStack:
+      - "Telecom Technology"
+      - "Training Curriculum"
+      - "CCNA Networking"
+    category: "Training & Education"
+    featured: true
+    liveUrl: "http://bsnlvisakhapatnamtrainings.blogspot.in/"
+    githubUrl: ""
+    startDate: "2015-01"
+    endDate: "present"
+
+  - id: "cyber-security-journey"
+    title: "Cyber Security & Ethical Hacking Learning Path"
+    shortDescription: "AFCEH certification and practical security skills development"
+    longDescription: |
+      Self-driven journey into cyber security inspired by university seminars and industry experts.
+      Completed Ankit Fadia Certified Ethical Hacker (AFCEH) program and continue building practical skills.
+    thumbnail: "/images/projects/cyber-security.jpg"
+    techStack:
+      - "Ethical Hacking"
+      - "Vulnerability Assessment"
+      - "Penetration Testing"
+      - "Security Awareness"
+    category: "Cyber Security"
+    featured: true
+    liveUrl: ""
+    githubUrl: ""
+    startDate: "2012-01"
+    endDate: "present"
+
+  - id: "power-system-analysis"
+    title: "Computer Methods in Power System Analysis"
+    shortDescription: "B.Tech final year project on power system computerization"
+    longDescription: |
+      Developed computational methods for analyzing electrical power systems using MATLAB.
+      Focused on load flow analysis, fault analysis, and stability studies.
+    thumbnail: "/images/projects/power-system.jpg"
+    techStack:
+      - "MATLAB"
+      - "Power Systems"
+      - "Numerical Methods"
+      - "Electrical Engineering"
+    category: "Academic Projects"
+    featured: false
+    liveUrl: ""
+    githubUrl: ""
+    startDate: "2009-01"
+    endDate: "2010-12"
+
+  - id: "photography-portfolio"
+    title: "Photography Portfolio"
+    shortDescription: "Personal photography collection showcasing various subjects"
+    longDescription: |
+      Collection of photographs covering nature, technology, events, and portraits.
+      Originally hosted on Zoho Sites gallery widget.
+    thumbnail: "/images/projects/photography.jpg"
+    techStack:
+      - "Photography"
+      - "Photo Editing"
+      - "Composition"
+    category: "Creative"
+    featured: false
+    liveUrl: ""
+    githubUrl: ""
+    startDate: "2010-01"
+    endDate: "present"
+
+  - id: "bsnl-training-blog"
+    title: "BSNL Visakhapatnam Trainings Blog"
+    shortDescription: "External blog documenting BSNL training programs"
+    longDescription: |
+      Blogspot site with detailed information about BSNL training offerings including
+      internships, inplant trainings, EETP, and exchange visits.
+    thumbnail: "/images/projects/bsnl-blog.jpg"
+    techStack:
+      - "Blogger/Blogspot"
+      - "Technical Writing"
+      - "Training Documentation"
+    category: "Training & Education"
+    featured: false
+    liveUrl: "http://bsnlvisakhapatnamtrainings.blogspot.in/"
+    githubUrl: ""
+    startDate: "2016-01"
+    endDate: "2019-12"

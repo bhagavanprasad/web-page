@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog')
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }))
+}
+
+const { post } = Astro.props as { post: CollectionEntry<'blog'> }
+const { title, date, excerpt, coverImage, tags, readingTime, body } = post.data
+---
+
+<Layout title={title} description={excerpt}>
+  <article class="py-20 lg:py-32 bg-white dark:bg-gray-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header class="mb-12 text-center">
+        <div class="flex flex-wrap justify-center gap-2 mb-4">
+          {tags?.map((tag: string) => (
+            <span class="px-3 py-1 text-sm bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full border border-blue-200 dark:border-blue-800">
+              {tag}
+            </span>
+          ))}
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          {title}
+        </h1>
+        <div class="flex items-center justify-center gap-6 text-gray-500 dark:text-gray-400">
+          <time class="text-sm" dateTime={date}>
+            {new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+          {readingTime && (
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {readingTime} min read
+            </span>
+          )}
+        </div>
+      </header>
+
+      {coverImage && (
+        <div class="mb-12 rounded-xl overflow-hidden shadow-xl">
+          <img 
+            src={coverImage} 
+            alt={title}
+            class="w-full h-auto"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      )}
+
+      <div class="prose prose-lg dark:prose-invert max-w-none" set:html={body} />
+    </div>
+  </article>
+</Layout>

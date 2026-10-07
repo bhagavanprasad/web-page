@@ -1,0 +1,84 @@
+experience:
+  - id: "bsnl-eetp"
+    company: "BSNL (Bharat Sanchar Nigam Limited)"
+    role: "SDE-EETP (Senior Design Engineer - Employability Enhancement Training Program)"
+    type: "Full-time"
+    location: "Visakhapatnam, Andhra Pradesh, India"
+    startDate: "2015-01"
+    endDate: "present"
+    current: true
+    description:
+      - "Teaching telecom technology to engineering students and fellow employees"
+      - "Conducting Employability Enhancement Training Program (EETP) for students"
+      - "Delivering summer/winter internship trainings and inplant specialized trainings"
+      - "Organizing one-day exchange visits for students"
+      - "Developing training curriculum for telecom technology"
+    technologies:
+      - "Telecom/Communication Engineering"
+      - "Networking (CCNA)"
+      - "Training & Pedagogy"
+      - "Curriculum Development"
+    achievements:
+      - "India's #1 telecom service provider training program"
+      - "Bridging industry-academia gap for engineering students"
+
+  - id: "andhra-univ-mtech"
+    company: "Andhra University, Visakhapatnam"
+    role: "M.Tech Computer Science Engineering (Part-time)"
+    type: "Education"
+    location: "Visakhapatnam, Andhra Pradesh, India"
+    startDate: "2010-01"
+    endDate: "2013-12"
+    current: false
+    description:
+      - "Part-time M.Tech while working at BSNL"
+      - "Transition from Electrical Engineering to Computer Science"
+      - "Exposure to high-end professionals in Computer Science"
+      - "Foundation for cyber security interest"
+    technologies:
+      - "Computer Science Engineering"
+      - "Advanced Algorithms"
+      - "Software Engineering"
+      - "Research Methodology"
+    achievements:
+      - "Prestigious university with huge campus and big libraries"
+      - "Second innings of college days"
+
+  - id: "jntu-btech"
+    company: "JNTU, Kakinada"
+    role: "B.Tech Electrical Engineering"
+    type: "Education"
+    location: "Kakinada, Andhra Pradesh, India"
+    startDate: "2006-01"
+    endDate: "2010-12"
+    current: false
+    description:
+      - "Project: Computer Methods in Power System Analysis"
+      - "Increased analytical ability toward computerization of Electrical networks"
+      - "Foundation in electrical engineering principles"
+    technologies:
+      - "Electrical Engineering"
+      - "Power Systems"
+      - "Computer Methods in Power System Analysis"
+      - "MATLAB/Simulation Tools"
+    achievements:
+      - "Computerization of Electrical networks project"
+
+  - id: "diploma-eee"
+    company: "Visakhapatnam Polytechnic"
+    role: "Diploma in Electrical & Electronics Engineering (EEE)"
+    type: "Education"
+    location: "Visakhapatnam, Andhra Pradesh, India"
+    startDate: "2003-01"
+    endDate: "2006-12"
+    current: false
+    description:
+      - "First exposure to technology with enthusiastic teachers"
+      - "Teachers played with curiosity through questions"
+      - "Showed the 'taste of technology'"
+    technologies:
+      - "Electrical Engineering Fundamentals"
+      - "Electronics"
+      - "Basic Circuit Theory"
+    achievements:
+      - "Teachers who inspired passion for technology"

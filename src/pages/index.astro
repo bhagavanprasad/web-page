@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/Hero.astro'
+import About from '../components/About.astro'
+import Experience from '../components/Experience.astro'
+import Skills from '../components/Skills.astro'
+import Projects from '../components/Projects.astro'
+import Contact from '../components/Contact.astro'
+import { getCollection } from 'astro:content'
+
+const aboutEntries = await getCollection('about')
+const about = aboutEntries[0]
+
+const experienceEntries = await getCollection('experience')
+const experience = experienceEntries[0]?.experience || []
+
+const skillsEntries = await getCollection('skills')
+const skills = skillsEntries[0]?.categories || []
+
+const projectsEntries = await getCollection('projects')
+const projects = projectsEntries[0]?.projects || []
+
+const siteName = about?.data?.name || "Bhagavan Prasad"
+const siteTitle = about?.data?.title || "SDE-EETP at BSNL"
+const siteTagline = about?.data?.tagline || "Feeling the technology rather than just learning"
+const siteLocation = about?.data?.location || "Visakhapatnam, Andhra Pradesh, India"
+const siteEmail = about?.data?.email || "me@bhagavanprasad.com"
+const siteAvatar = about?.data?.avatar || "/images/avatar.svg"
+const siteBanner = about?.data?.banner || "/images/banner.jpg"
+const socialLinks = about?.data?.social || {}
+---
+
+<Layout title={siteName} description={`${siteTitle} | ${siteTagline}`}>
+  <Hero 
+    name={siteName}
+    title={siteTitle}
+    tagline={siteTagline}
+    location={siteLocation}
+    email={siteEmail}
+    avatar={siteAvatar}
+    banner={siteBanner}
+  />
+  
+  <About 
+    name={siteName}
+    title={siteTitle}
+    location={siteLocation}
+    email={siteEmail}
+    summary={about?.data?.summary || "Teaching telecom technology, passionate about cyber security, and sharing knowledge."}
+    philosophy={about?.data?.philosophy || []}
+    inspirations={about?.data?.inspirations || []}
+    body={about?.body || ''}
+  />
+  
+  <Experience 
+    experience={experience}
+  />
+  
+  <Skills 
+    categories={skills}
+  />
+  
+  <Projects 
+    projects={projects}
+  />
+  
+  <Contact 
+    email={siteEmail}
+    social={socialLinks}
+  />
+</Layout>
