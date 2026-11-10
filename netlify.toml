@@ -2,14 +2,17 @@
   command = "npm run build"
   publish = "dist"
 
-[edge_functions]
-  # Disable edge access protection
-  enabled = false
-
-[access]
-  # Disable site access protection
-  enabled = false
-
 [context.production.environment]
   NODE_VERSION = "22"
   PLAUSIBLE_DOMAIN = "bhagavanprasad.com"
+
+# Disable site access protection
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Note: Site access protection (password/SSO) must be disabled in Netlify dashboard:
+# Site settings > Access control > Site access > "Public"
